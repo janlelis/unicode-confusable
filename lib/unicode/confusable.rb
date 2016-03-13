@@ -1,5 +1,4 @@
 require_relative "confusable/constants"
-require_relative "confusable/index"
 
 require 'unicode_normalize/normalize'
 
@@ -10,7 +9,7 @@ module Unicode
     end
 
     def self.skeleton(string)
-      require_relative 'display_width/index' unless defined? ::Unicode::Confusable::INDEX
+      require_relative 'confusable/index' unless defined? ::Unicode::Confusable::INDEX
       UnicodeNormalize.normalize(
         UnicodeNormalize.normalize(string, :nfd).each_codepoint.map{ |codepoint|
           INDEX[codepoint] || codepoint
