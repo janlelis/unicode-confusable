@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.3.0
+
+* Add Unicode::Confusable.list method which returns all confusables of given character
+
 ### 1.2.0
 
 * Unicode 10
