@@ -8,6 +8,8 @@ Supported Rubies: **2.4**, **2.3**, **2.2**
 
 ## Usage
 
+### Confusable?
+
 ```ruby
 require "unicode/confusable"
 
@@ -26,6 +28,22 @@ Unicode::Confusable.skeleton "ℜ𝘂ᖯʏ" # => "Ruby"
 ```
 
 **Please note:** The skeleton is an intermediate representation, not meant for any other use than testing confusability, [according to the standard](http://www.unicode.org/reports/tr39/#Confusable_Detection).
+
+### List
+
+List all confusables of specfic character:
+
+```ruby
+Unicode::Confusable.list("o", false)
+# => ["ం", "ಂ", "ം", "ං", "०", "੦", "૦", "௦", "౦", "೦", "൦", "๐", "໐", "၀", "٥", "۵", "ｏ", "ℴ", "𝐨", "𝑜", "𝒐", "𝓸", "𝔬", "𝕠", "𝖔", "𝗈", "𝗼", "𝘰", "𝙤", "𝚘", "ᴏ", "ᴑ", "ꬽ", "ο", "𝛐", "𝜊", "𝝄", "𝝾", "𝞸", "σ", "𝛔", "𝜎", "𝝈", "𝞂", "𝞼", "ⲟ", "о", "ჿ", "օ", "ס", "ه", "𞸤", "𞹤", "𞺄", "ﻫ", "ﻬ", "ﻪ", "ﻩ", "ھ", "ﮬ", "ﮭ", "ﮫ", "ﮪ", "ہ", "ﮨ", "ﮩ", "ﮧ", "ﮦ", "ە", "ഠ", "ဝ", "𐓪", "𑣈", "𑣗", "𐐬"]
+```
+
+If you omit the second parameter, it will also show confusables, where the given character is just a part of:
+
+```ruby
+Unicode::Confusable.list("o")
+# => ["⒪", "ꜵ", "℅", "ᴔ", "ꭁ", "ꭂ", "ﷲ", "№", "ం", "ಂ", "ം", "ං", "०", "੦", "૦", "௦", "౦", "೦", "൦", "๐", "໐", "၀", "٥", "۵", "ｏ", "ℴ", "𝐨", "𝑜", "𝒐", "𝓸", "𝔬", "𝕠", "𝖔", "𝗈", "𝗼", "𝘰", "𝙤", "𝚘", "ᴏ", "ᴑ", "ꬽ", "ο", "𝛐", "𝜊", "𝝄", "𝝾", "𝞸", "σ", "𝛔", "𝜎", "𝝈", "𝞂", "𝞼", "ⲟ", "о", "ჿ", "օ", "ס", "ه", "𞸤", "𞹤", "𞺄", "ﻫ", "ﻬ", "ﻪ", "ﻩ", "ھ", "ﮬ", "ﮭ", "ﮫ", "ﮪ", "ہ", "ﮨ", "ﮩ", "ﮧ", "ﮦ", "ە", "ഠ", "ဝ", "𐓪", "𑣈", "𑣗", "𐐬", "ۿ", "ø", "ꬾ", "ɵ", "ꝋ", "ө", "ѳ", "ꮎ", "ꮻ", "ꭴ", "ﳙ", "ơ", "œ", "ɶ", "∞", "ꝏ", "ꚙ", "ﳗ", "ﱑ", "ﳘ", "ﱒ", "ﶓ", "ﶔ", "ﱓ", "ﱔ", "ൟ", "တ", "ꭣ", "ﲠ", "ﳢ", "ﲥ", "ﳤ", "ﷻ", "ﴱ", "ﳨ", "ﴲ", "ﳪ", "ﷺ", "ﷷ", "ﳍ", "ﳖ", "ﳯ", "ﳞ", "ﳱ", "ﳦ", "ﲛ", "ﳠ", "ﯭ", "ﯬ"]
+```
 
 ## No Advanced Detection
 
