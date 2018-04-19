@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### Next
+
+* Use `Gem::Util` for `gunzip`, removes deprecation warning
+
 ### 1.3.0
 
 * Add Unicode::Confusable.list method which returns all confusables of given character
