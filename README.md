@@ -4,7 +4,9 @@ Compares two strings if they are visually confusable as described in [Unicode® 
 
 Unicode version: **10.0.0**
 
-Supported Rubies: **2.5**, **2.4**, **2.3**, **2.2**
+Supported Rubies: **2.5**, **2.4**, **2.3**
+
+Old Rubies that might still work: **2.2**
 
 ## Usage
 
