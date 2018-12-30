@@ -4,13 +4,14 @@ language: ruby
 script: bundle exec ruby spec/unicode_confusable_spec.rb
 
 rvm:
-- 2.5.1
+- 2.6.0
+- 2.5.3
 - 2.4.4
-- 2.3.7
+- 2.3.8
 - 2.2
 - ruby-head
 - jruby-head
-- jruby-9.1.16.0
+- jruby-9.2.5.0
 
 matrix:
   allow_failures:
