@@ -61,5 +61,5 @@ See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related 
 
 ## MIT License
 
-- Copyright (C) 2016-2018 Jan Lelis <http://janlelis.com>. Released under the MIT license.
+- Copyright (C) 2016-2019 Jan Lelis <http://janlelis.com>. Released under the MIT license.
 - Unicode data: http://www.unicode.org/copyright.html#Exhibit1
