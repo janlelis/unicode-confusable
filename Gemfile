@@ -4,4 +4,5 @@ gemspec
 
 gem 'minitest'
 gem 'rake'
+gem 'irb'
 
