@@ -1,20 +1,20 @@
 sudo: false
 language: ruby
 
-script: bundle exec ruby spec/unicode_confusable_spec.rb
-
 rvm:
+- 2.7
 - 2.6
 - 2.5
 - 2.4
 - 2.3
-- 2.2
 - ruby-head
-- jruby-head
-- jruby-9.2.7.0
+- jruby-9.2.9.0
+- truffleruby
 
 matrix:
   allow_failures:
     - rvm: 2.3
-    - rvm: 2.2
-    - rvm: jruby-head
+    - rvm: ruby-head
+    - rvm: jruby-2.9.2.0
+    - rvm: truffleruby
+#   fast_finish: true
