@@ -6,7 +6,7 @@ Unicode version: **13.0.0** (March 2020)
 
 Supported Rubies: **2.7**, **2.6**, **2.5**, **2.4**
 
-Old Rubies that might still work: **2.3**, **2.2**
+Old Rubies which might still work: **2.3**, **2.2**
 
 ## Usage
 
@@ -33,7 +33,7 @@ Unicode::Confusable.skeleton "ℜ𝘂ᖯʏ" # => "Ruby"
 
 ### List
 
-List all confusables of specific character:
+List all confusables of a specific character:
 
 ```ruby
 Unicode::Confusable.list("o", false)
@@ -62,4 +62,4 @@ See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related 
 ## MIT License
 
 - Copyright (C) 2016-2020 Jan Lelis <https://janlelis.com>. Released under the MIT license.
-- Unicode data: http://www.unicode.org/copyright.html#Exhibit1
+- Unicode data: https://www.unicode.org/copyright.html#Exhibit1
