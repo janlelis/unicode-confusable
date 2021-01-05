@@ -1,0 +1,14 @@
+# Classes
+module Unicode
+  module Confusable
+    VERSION: String
+    UNICODE_VERSION: String
+    DATA_DIRECTORY: String
+    INDEX_FILENAME: String
+    INDEX: Hash
+
+    def self.confusable?: (String string1, String string2) -> bool
+    def self.skeleton: (String string) -> String
+    def self.list: (String char, ?bool partial_mapping_allowed) -> Array
+  end
+end
