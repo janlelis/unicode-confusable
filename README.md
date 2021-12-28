@@ -6,7 +6,7 @@ Unicode version: **14.0.0**\* (September 2021)
 
 \* The Unicode normalization [depends on your Ruby version](https://idiosyncratic-ruby.com/73-unicode-version-mapping.html)
 
-Supported Rubies: **3.0**, **2.7**
+Supported Rubies: **3.1**, **3.0**, **2.7**
 
 Old Rubies which might still work: **2.6**, **2.5**, **2.4**, **2.3**, **2.2**
 
