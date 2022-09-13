@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### 1.9.0 (unreleased)
+### 1.9.0
 
 - Unicode 15.0
 
