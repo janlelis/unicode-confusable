@@ -35,7 +35,7 @@ Unicode::Confusable.skeleton "ℜ𝘂ᖯʏ" # => "Ruby"
 
 ### List
 
-List all confusables of a specific character:
+List all characters that map to the confusable exemplar given:
 
 ```ruby
 Unicode::Confusable.list("o", false)
