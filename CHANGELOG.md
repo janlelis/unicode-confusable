@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.12.0 (unreleased)
+
+- Remove default ignorable codepoints, which is now part of the skeleton algorithm
+- Fix that confusable list for ; would contain null bytes
+
 ### 1.11.0
 
 - Unicode 16.0

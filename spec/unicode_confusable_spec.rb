@@ -2,16 +2,28 @@ require_relative "../lib/unicode/confusable"
 require "minitest/autorun"
 
 describe Unicode::Confusable do
-  it "will detect official confusables" do
-    assert_equal true, Unicode::Confusable.confusable?("1", "l")
-    assert_equal true, Unicode::Confusable.confusable?("ℜ𝘂ᖯʏ", "Ruby")
-    assert_equal true, Unicode::Confusable.confusable?("Michael", "Michae1")
-    assert_equal true, Unicode::Confusable.confusable?("⁇", "??")
+  describe ".confusable?(string1, string2)" do
+    it "will detect official confusables" do
+      assert_equal true, Unicode::Confusable.confusable?("1", "l")
+      assert_equal true, Unicode::Confusable.confusable?("ℜ𝘂ᖯʏ", "Ruby")
+      assert_equal true, Unicode::Confusable.confusable?("Michael", "Michae1")
+      assert_equal true, Unicode::Confusable.confusable?("⁇", "??")
+    end
+
+    it "will return false for non-confusables" do
+      assert_equal false, Unicode::Confusable.confusable?("a", "b")
+      assert_equal false, Unicode::Confusable.confusable?("⁇", "?")
+    end
   end
 
-  it "will return false for non-confusables" do
-    assert_equal false, Unicode::Confusable.confusable?("a", "b")
-    assert_equal false, Unicode::Confusable.confusable?("⁇", "?")
+  describe ".skeleton(string)" do
+    it "returns internal skeleton representation" do
+      assert_equal "Ruby", Unicode::Confusable.skeleton("ℜ𝘂ᖯʏ")
+    end
+
+    it "will remove default ignorable codepoints" do
+      assert_equal "ab", Unicode::Confusable.skeleton("a\u{FE0F}b")
+    end
   end
 
   describe ".list(char)" do
