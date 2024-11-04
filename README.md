@@ -53,15 +53,9 @@ Unicode::Confusable.list("o")
 
 Testing for bidirectional confusables is currently not supported.
 
-## No Advanced Detection
+## Single-script / Mixed-script / Whole-script
 
-TR 39 also describes mechanisms for a more exact recognition of confusables, also within the same string:
-
-- Single-script confusable
-- Mixed-script confusable
-- Whole-script confusable
-
-This is currently not supported by this gem.
+TR 39 also describes mechanisms for further categorization of confusables. This is currently not part of this gem, however the [unicode-scripts gem](https://github.com/janlelis/unicode-scripts) does include mixed-script detection, which you can use for this purpose.
 
 See [unicode-x](https://github.com/janlelis/unicode-x) for more Unicode related micro libraries.
 
