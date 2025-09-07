@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.13.0 (unreleased)
+
+- Unicode 17.0
+
 ### 1.12.0
 
 - Remove default ignorable codepoints, which is now part of the skeleton algorithm
