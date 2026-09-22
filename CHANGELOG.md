@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.14.1
+
+- Use regex to remove default ignorable codepoints, speeds up confusable check,
+  closes #2
+
 ### 1.14.0
 
 - Unicode 18.0

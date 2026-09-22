@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
   gem.metadata      = { "rubygems_mfa_required" => "true" }
 
   gem.required_ruby_version = ">= 2.2"
+  gem.add_dependency "charcutter", ">= 0.1.0", "< 2.0"
 end

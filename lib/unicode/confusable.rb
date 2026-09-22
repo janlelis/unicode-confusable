@@ -1,11 +1,10 @@
 require_relative "confusable/constants"
 
 require 'unicode_normalize/normalize'
+require 'charcutter'
 
 module Unicode
   module Confusable
-    autoload :IGNORABLE, File.expand_path('confusable/ignorable', __dir__)
-
     def self.confusable?(string1, string2)
       skeleton(string1) == skeleton(string2)
     end
@@ -13,10 +12,10 @@ module Unicode
     def self.skeleton(string)
       require_relative 'confusable/index' unless defined? ::Unicode::Confusable::INDEX
       UnicodeNormalize.normalize(
-        UnicodeNormalize.normalize(string, :nfd).each_codepoint.map{ |codepoint|
-          unless IGNORABLE.include?(codepoint)
-            INDEX[:CONFUSABLE][codepoint] || codepoint
-          end
+        Charcutter[
+          UnicodeNormalize.normalize(string, :nfd)
+        ].deny(:ignorable).each_codepoint.map{ |codepoint|
+          INDEX[:CONFUSABLE][codepoint] || codepoint
         }.flatten.compact.pack("U*"), :nfd
       )
     end
